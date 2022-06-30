@@ -9,7 +9,7 @@ config/quickstart-realm.json
 2. Create users
    1. igor with password `igor`
    2. jdou with password `jdou`
-   3. aclice with password `alice`
+   3. alice with password `alice`
 3. Add `user` role  to `Assigned roles` on the `Role mappings` tab.
 
 
