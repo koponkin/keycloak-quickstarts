@@ -1,0 +1,40 @@
+version: '2.1'
+services:
+
+  keycloak:
+    image: jboss/keycloak:15.0.2
+    environment:
+     - KEYCLOAK_USER=root
+     - KEYCLOAK_PASSWORD=password
+     - DB_VENDOR=postgres
+     - DB_ADDR=db
+     - DB_DATABASE=keycloak
+     - DB_USER=keycloak
+     - DB_PASSWORD=password
+     - KEYCLOAK_LOGLEVEL=DEBUG
+     - POSTGRES_PORT_5432_TCP_ADDR=db
+     - POSTGRES_PORT_5432_TCP_PORT=5432
+     - ROOT_LOGLEVEL=DEBUG
+    ports:
+      - "8080:8080"
+    expose:
+      - 8080
+    depends_on:
+      - db
+    links:
+      - db
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5434:5432"
+    expose:
+      - 5434
+    volumes:
+     - ./db-local/docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d
+     - ./postgresql/data:/var/lib/postgresql/data
