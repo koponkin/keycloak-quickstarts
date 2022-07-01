@@ -1,0 +1,2134 @@
+{
+	"info": {
+		"_postman_id": "ef3398a2-3064-4787-9b0b-d67bddec67fb",
+		"name": "Keycloak Authorization demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3695865"
+	},
+	"item": [
+		{
+			"name": "Igor get all resources",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Igor's token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/vaults",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jdoe get all resources",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Igor's token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/vaults",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alice get all resources",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Igor's token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/vaults",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Igor get resource",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Igor's token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/vaults",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jdoe get resource",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Igor's token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/vaults",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alice get resource",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Igor's token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/vaults",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Igor create new resource",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Igor's token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\": \"tnt123456\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/vaults",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jdoe create new resource",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "jdoe",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "jdoe",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\": \"tnt123456\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/vaults",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alice create new resource",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "alice",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alice",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\": \"tnt123456\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/vaults",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Igor update resource",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "alice",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alice",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/vaults/tnt123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults",
+						"tnt123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jdoe update resource",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "jdoe",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "jdoe",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/vaults/tnt123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults",
+						"tnt123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alice update resource",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "alice",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alice",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/vaults/tnt123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults",
+						"tnt123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Igor delete resource",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/vaults/tnt123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults",
+						"tnt123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jdoe delete resource",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "jdoe",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "jdoe",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/vaults/tnt123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults",
+						"tnt123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alice delete resource",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "alice",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alice",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/vaults/tnt123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults",
+						"tnt123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Igor get resource members",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Igor's token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/vaults/tnt123456/members",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults",
+						"tnt123456",
+						"members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jdoe get resource members",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "jdoe",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "jdoe",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/vaults/tnt123456/members",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults",
+						"tnt123456",
+						"members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alice get resource members",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "alice",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alice",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/vaults/tnt123456/members",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults",
+						"tnt123456",
+						"members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Igor add resource member",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Igor's token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_id\": \"jdoe\", \"role\": \"write\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/vaults/tnt123456/members",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults",
+						"tnt123456",
+						"members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jdoe add resource member",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Igor's token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_id\": \"jdoe\", \"role\": \"write\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/vaults/tnt123456/members",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults",
+						"tnt123456",
+						"members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alice add resource member",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "password",
+							"value": "alice",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alice",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_id\": \"jdoe\", \"role\": \"write\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/vaults/tnt123456/members",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults",
+						"tnt123456",
+						"members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Igor delete resource member",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Igor's token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_id\": \"jdoe\", \"role\": \"write\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/vaults/tnt123456/members/jdoe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults",
+						"tnt123456",
+						"members",
+						"jdoe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jdoe delete resource member",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Igor's token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "igor",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_id\": \"jdoe\", \"role\": \"write\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/vaults/tnt123456/members/jdoe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults",
+						"tnt123456",
+						"members",
+						"jdoe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alice delete resource member",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "alice",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "alice",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGSjg2R2NGM2pUYk5MT2NvNE52WmtVQ0lVbWZZQ3FvcXRPUWVNZmJoTmxFIn0.eyJleHAiOjE2NTY2MDE4NTcsImlhdCI6MTY1NjYwMTU1NywianRpIjoiNDYxMDM2MGYtNWYxZi00NjdmLTk5YzctMTk0Yjc5MzAyYzg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwcmluZy1ib290LXF1aWNrc3RhcnQiLCJzdWIiOiI3NmNmZTIyOS03YjlkLTRhZTUtOGU3Yi0yNzE1OWJkNWEyYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhcHAtYXV0aHotcmVzdC1zcHJpbmdib290Iiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzcxNDkwLTRjYTYtNDA3Ny05ZGJiLTk1NzU4YzRiZDhmYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJ1c2VyIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiIwNDc3MTQ5MC00Y2E2LTQwNzctOWRiYi05NTc1OGM0YmQ4ZmEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWdvciJ9.jChEjfoKwBk-xbL5lNHbUMkLOMzHwrWFkx5W2dCK0fherSGNQ3GHiAdqTh_XJHJQvnO47jMl9ftUrU3unWHo-pNJLxaK6Wqk4CfYr97-4v0Qm9-LXMBkxN84W4QYx0EFdE_VUPSTZRaXoSKMZT6Qf3rod-k1b2r3LorNqvKCxEU",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "app-authz-rest-springboot",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/auth/realms/spring-boot-quickstart/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://auth.verygoodsecurity.io/auth/realms/vgs/protocol/openid-connect/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_id\": \"jdoe\", \"role\": \"write\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/vaults/tnt123456/members/jdoe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"vaults",
+						"tnt123456",
+						"members",
+						"jdoe"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

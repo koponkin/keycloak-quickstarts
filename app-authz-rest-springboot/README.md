@@ -4,15 +4,10 @@ docker-compose -f docker-compose-keycloak-local.yml up
 ### Import the realm
 config/quickstart-realm.json
 
-### Add users
-1. Create a `user` role in Realm roles
-2. Create users
-   1. igor with password `igor`
-   2. jdou with password `jdou`
-   3. alice with password `alice`
-3. Add `user` role  to `Assigned roles` on the `Role mappings` tab.
-
+### Add `User` role to the `app-authz-rest-springboot` on the `scope` tab
 
 ### Run the app
 mvn spring-boot:run
 
+### Configure postman
+Import requests from /postman/Keycloak Authorization demo.postman_collection.json 
